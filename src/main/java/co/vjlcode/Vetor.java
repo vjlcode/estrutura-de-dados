@@ -3,9 +3,11 @@ package co.vjlcode;
 public class Vetor {
 
     private String[] elementos;
+    private int tamanho;
 
     public Vetor(int capacidade) {
         this.elementos = new String[capacidade];
+        this.tamanho = 0;
     }
 
     /**
@@ -21,5 +23,15 @@ public class Vetor {
         }
     }
 
+    public void adiciona2(String elemento) throws Exception {
+
+        if(this.tamanho < this.elementos.length){
+            this.elementos[this.tamanho] = elemento;
+            this.tamanho++;
+        } else {
+            throw new Exception("vetor cheio, não é possivel adicionar mais elementos");
+        }
+
+    }
 
 }

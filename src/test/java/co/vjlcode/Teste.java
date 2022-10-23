@@ -25,5 +25,20 @@ public class Teste {
         }
     }
 
+    @Test
+    public void testeVetorAdiciona3(){
+
+        Vetor vetor = new Vetor(10);
+
+        vetor.adiciona3("elemento1");
+        vetor.adiciona3("elemento2");
+        vetor.adiciona3("elemento3");
+
+        System.out.println(vetor.tamanho());
+        System.out.println(vetor);
+
+    }
+
+
 
 }

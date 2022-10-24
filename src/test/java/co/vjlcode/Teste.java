@@ -66,5 +66,27 @@ public class Teste {
     }
 
 
+    @Test
+    public void testeVetorBuscaSequencialPosicao(){
+
+        Vetor vetor = new Vetor(10);
+
+        vetor.adiciona3("B");
+        vetor.adiciona3("C");
+        vetor.adiciona3("E");
+        vetor.adiciona3("F");
+        vetor.adiciona3("G");
+
+        System.out.println(vetor);
+
+        vetor.adiciona3(4, "A");
+
+        System.out.println(vetor);
+
+        vetor.adiciona3(0, "D");
+
+        System.out.println(vetor);
+
+    }
 
 }

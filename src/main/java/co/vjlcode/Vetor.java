@@ -43,7 +43,7 @@ public class Vetor {
 
     }
 
-    public boolean adiciona3(String elemento){
+    public boolean adiciona3(String elemento) {
         if (this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
@@ -52,23 +52,37 @@ public class Vetor {
         return true;
     }
 
-    public int tamanho(){
+    public String busca(int posicao){
+        if(!(posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posição Invalida");
+        }
+
+        return this.elementos[posicao];
+    }
+
+    public int tamanho() {
         return this.tamanho;
     }
 
-    public String toString(){
+    /**
+     * esse toString retorna os elementos do vetor de forma eficiente
+     *
+     * @return toString;
+     */
+
+    public String toString() {
 
         StringBuilder s = new StringBuilder();
 
         s.append("[");
 
-        for(int i=0; i<this.tamanho-1; i++){
+        for (int i = 0; i < this.tamanho - 1; i++) {
             s.append(this.elementos[i]);
             s.append(", ");
         }
 
-        if(this.tamanho>0){
-            s.append(this.elementos[this.tamanho-1]);
+        if (this.tamanho > 0) {
+            s.append(this.elementos[this.tamanho - 1]);
         }
 
         s.append("]");

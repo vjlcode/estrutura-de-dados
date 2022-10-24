@@ -52,6 +52,19 @@ public class Teste {
 
     }
 
+    @Test
+    public void testeVetorBuscaSequencial(){
+
+        Vetor vetor = new Vetor(10);
+
+        vetor.adiciona3("elemento1");
+        vetor.adiciona3("elemento2");
+        vetor.adiciona3("elemento3");
+
+        System.out.println(vetor.busca("elemento0"));
+
+    }
+
 
 
 }
